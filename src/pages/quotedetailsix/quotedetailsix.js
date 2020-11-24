@@ -48,8 +48,9 @@ function QuoteDetailSix(props) {
     // }
 
     let mobileLength=mobileno;
-    let splitedEmail1=email.split('.')[0];
-    let splitedEmail2=email.split('.')[1];
+    const seperator=email.lastIndexOf(".");
+    let splitedEmail1=email.substring(0,seperator);
+    let splitedEmail2=email.substring(seperator+1);
 
     // const reset=()=>{
     //   setEmailError(false);
